@@ -18,6 +18,7 @@ public class FileStorageUtility
 	public void addUser(Customer cust)
 	{
 		this.users.add(cust);
+		this.setCurrentUser(cust);
 	}
 	
 	public boolean login(String userId, String password)
