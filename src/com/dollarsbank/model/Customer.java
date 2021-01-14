@@ -73,7 +73,7 @@ public class Customer
 	{
 		if(checkingToSavings)
 		{
-			if(amount > this.checking.getAmount())
+			if(amount <= this.checking.getAmount())
 			{
 				this.checking.setAmount(this.checking.getAmount() - amount);
 				this.savings.setAmount(this.savings.getAmount() + amount);
@@ -87,7 +87,7 @@ public class Customer
 		}
 		else
 		{
-			if(amount > this.savings.getAmount())
+			if(amount <= this.savings.getAmount())
 			{
 				this.savings.setAmount(this.savings.getAmount() - amount);
 				this.checking.setAmount(this.checking.getAmount() + amount);
