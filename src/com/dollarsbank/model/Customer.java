@@ -170,6 +170,13 @@ public class Customer
 			checkBalance();
 		}
 	}
+
+	@Override
+	public String toString()
+	{
+		return "Customer [name=" + name + ", address=" + address + ", number=" + number + ", userId=" + userId
+				+ "]\n" + "Checking: $" + this.checking.getAmount() + "\nSavings: $" + this.savings.getAmount();
+	}
 	
 	
 	

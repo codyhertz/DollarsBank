@@ -18,7 +18,6 @@ public class FileStorageUtility
 	public void addUser(Customer cust)
 	{
 		this.users.add(cust);
-		this.setCurrentUser(cust);
 	}
 	
 	public boolean login(String userId, String password)
@@ -27,7 +26,7 @@ public class FileStorageUtility
 		{
 			if(users.get(i).getUserId().equals(userId))
 			{
-				boolean correctPassword = password == users.get(i).getPassword();
+				boolean correctPassword = password.equals(users.get(i).getPassword());
 				
 				if(correctPassword)
 				{
